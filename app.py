@@ -35,7 +35,7 @@ thinness_5_9_years = st.number_input('thinness 5-9 years', min_value=0.00,max_va
 income_composition_of_resources = st.number_input('Income composition of resources', min_value=0.00,max_value=1.00)
 schooling = st.number_input('Schooling', min_value=0.00,max_value=21.00)
 if st.button('Predict Status'):
-    input_data = [[year, population,country,gdp_per_capita, life_expectancy, adult_mortality, infant_deaths, alcohol,
+    input_data = [[year, population,gdp_per_capita, life_expectancy, adult_mortality, infant_deaths, alcohol,
                    percentage_expenditure, hepatitis_b, measles, under_five_deaths, polio, total_expenditure,
                    diphtheria, hiv_aids, body_mass_index, thinness_1_19_years, thinness_5_9_years, income_composition_of_resources, schooling]]
     prediction = status_prediction_model.predict(input_data)
